@@ -17,7 +17,8 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->foreignId('brands_id')->references('id')->on('brands')->onDelete('restrict');
             $table->foreignId('created_by')->references('id')->on('users')->onDelete('cascade');
-            $table->timestamps();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });
     }
 

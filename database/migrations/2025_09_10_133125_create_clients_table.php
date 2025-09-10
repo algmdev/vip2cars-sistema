@@ -20,7 +20,8 @@ return new class extends Migration
             $table->string('email', 150);
             $table->string('phone_number', 15);
             $table->foreignId('created_by')->references('id')->on('users')->onDelete('cascade');
-            $table->timestamps();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });
     }
 

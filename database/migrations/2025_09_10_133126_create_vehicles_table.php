@@ -18,7 +18,8 @@ return new class extends Migration
             $table->foreignId('models_id')->references('id')->on('models')->onDelete('restrict');
             $table->foreignId('clients_id')->references('id')->on('clients')->onDelete('restrict');
             $table->foreignId('created_by')->references('id')->on('users')->onDelete('cascade');
-            $table->timestamps();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });
     }
 
