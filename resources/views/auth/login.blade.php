@@ -40,5 +40,5 @@
 @endsection
 
 @section('scripts')
-    <script src="{{ asset('scripts/auth/login.js') }}"></script>
+    <script src="{{ asset('scripts/auth/login.js') }}?v={{ date('YmdHis') }}"></script>
 @endsection

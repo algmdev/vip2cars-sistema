@@ -1,6 +1,6 @@
 
 const routes = {
-    login: baseUrl + '/auth',
+    login: baseUrl + '/login',
 }
 
 $(document).on('submit', '#login-form', function (e) {
@@ -18,7 +18,7 @@ $(document).on('submit', '#login-form', function (e) {
         },
         success: function (response) {
             if (response.statusCode === 200) {
-                window.location.href = '/app'
+                window.location.href = '/app/home'
             }
         },
         error: function (error) {
