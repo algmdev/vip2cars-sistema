@@ -50,7 +50,7 @@
 
     <script>
         const baseUrl = '{{ url('/') }}'
-        const dtSpanish = 'https://cdn.datatables.net/plug-ins/2.3.4/i18n/es-MX.json'
+        const dtSpanish = 'https://cdn.datatables.net/plug-ins/2.3.4/i18n/es-ES.json'
     </script>
 
     @yield('scripts')

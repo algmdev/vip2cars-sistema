@@ -12,6 +12,7 @@ Route::middleware('web')->group(function () {
     Route::middleware('auth')->prefix('app')->name('app.')->group(function () {
         require __DIR__ . '/web_routes/home.php';
         require __DIR__ . '/web_routes/brands.php';
+        require __DIR__ . '/web_routes/clients.php';
         require __DIR__ . '/web_routes/models.php';
     });
 });
