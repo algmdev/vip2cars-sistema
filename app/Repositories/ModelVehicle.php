@@ -69,4 +69,22 @@ class ModelVehicle
 
         return $query;
     }
+
+    public static function searchByBrandId($id)
+    {
+        $query = DB::table('models as t0')
+            ->select([
+                't0.id',
+                't0.name',
+                't0.description',
+                't0.created_at',
+                't0.brands_id',
+                't1.name as creator_name'
+            ])
+            ->join('users as t1', 't1.id', 't0.created_by')
+            ->where('t0.brands_id', $id)
+            ->get();
+
+        return $query;
+    }
 }

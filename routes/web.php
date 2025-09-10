@@ -14,5 +14,6 @@ Route::middleware('web')->group(function () {
         require __DIR__ . '/web_routes/brands.php';
         require __DIR__ . '/web_routes/clients.php';
         require __DIR__ . '/web_routes/models.php';
+        require __DIR__ . '/web_routes/vehicles.php';
     });
 });

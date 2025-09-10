@@ -20,7 +20,7 @@
                         <li><a class="dropdown-item" href="{{ route('app.brands.index') }}">Marcas</a></li>
                         <li><a class="dropdown-item" href="{{ route('app.models.index') }}">Modelos</a></li>
                         <li><a class="dropdown-item" href="{{ route('app.clients.index') }}">Clientes</a></li>
-                        <li><a class="dropdown-item" href="#">Vehículos</a></li>
+                        <li><a class="dropdown-item" href="{{ route('app.vehicles.index') }}">Vehículos</a></li>
                     </ul>
                 </li>
             </ul>
