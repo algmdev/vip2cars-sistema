@@ -9,7 +9,6 @@ Route::controller(BrandController::class)->prefix('brands')->name('brands.')->gr
     Route::post('/', 'store')->name('store');
     Route::delete('/', 'delete')->name('delete');
     Route::put('/{id}', 'update')->name('update');
-    // Route::get('/{id}/edit', 'editBrandModal')->name('editBrandModal');
 
     Route::prefix('partials')->name('partials.')->group(function () {
         Route::get('/brands-table', 'brandTable')->name('brands-table');
